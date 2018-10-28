@@ -1,5 +1,8 @@
 package com.pluralsight.bookstore.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -8,55 +11,80 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
+@ApiModel(description = "Book resource representation" )
 public class Book {
+
+    // ======================================
+    // =             Attributes             =
+    // ======================================
 
     @Id
     @GeneratedValue
+    @ApiModelProperty("Identifier")
     private Long id;
 
     @Column(length = 200)
     @NotNull
     @Size(min = 1, max = 200)
+    @ApiModelProperty("Title of the book")
     private String title;
 
     @Column(length = 10000)
     @Size(min = 1, max = 10000)
+    @ApiModelProperty("Summary describing the book")
     private String description;
 
     @Column(name = "unit_cost")
     @Min(1)
+    @ApiModelProperty("Unit cost")
     private Float unitCost;
 
+    @Column(length = 50)
     @NotNull
     @Size(min = 1, max = 50)
+    @ApiModelProperty("ISBN number")
     private String isbn;
 
     @Column(name = "publication_date")
     @Temporal(TemporalType.DATE)
     @Past
+    @ApiModelProperty("Date in which the book has been published")
     private Date publicationDate;
 
     @Column(name = "nb_of_pages")
+    @ApiModelProperty("Number of pages")
     private Integer nbOfPages;
 
     @Column(name = "image_url")
-    private String imageUrl;
+    @ApiModelProperty("URL of the image cover")
+    private String imageURL;
 
+    @Enumerated
+    @ApiModelProperty( value = "Language in which the book has been written")
     private Language language;
+
+    // ======================================
+    // =            Constructors            =
+    // ======================================
 
     public Book() {
     }
 
-    public Book(String isbn, String title, Float unitCost, Integer nbOfPages, Language language, Date publicationDate, String imageUrl, String description) {
+    public Book(String isbn, String title, Float unitCost, Integer nbOfPages, Language language, Date publicationDate, String imageURL, String description) {
         this.isbn = isbn;
         this.title = title;
         this.unitCost = unitCost;
         this.nbOfPages = nbOfPages;
         this.language = language;
         this.publicationDate = publicationDate;
-        this.imageUrl = imageUrl;
+        this.imageURL = imageURL;
         this.description = description;
     }
+
+    // ======================================
+    // =        Getters and Setters         =
+    // ======================================
+
 
     public Long getId() {
         return id;
@@ -102,24 +130,8 @@ public class Book {
         return publicationDate;
     }
 
-    public void setPublicationDate(Date publicatioDate) {
-        this.publicationDate = publicatioDate;
-    }
-
-    public Integer getNbOfPages() {
-        return nbOfPages;
-    }
-
-    public void setNbOfPages(Integer nbOfPages) {
-        this.nbOfPages = nbOfPages;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setPublicationDate(Date publicationDate) {
+        this.publicationDate = publicationDate;
     }
 
     public Language getLanguage() {
@@ -130,18 +142,36 @@ public class Book {
         this.language = language;
     }
 
+    public Integer getNbOfPages() {
+        return nbOfPages;
+    }
+
+    public void setNbOfPages(Integer nbOfPages) {
+        this.nbOfPages = nbOfPages;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imagURL) {
+        this.imageURL = imagURL;
+    }
+
+    // ======================================
+    // =   Methods hash, equals, toString   =
+    // ======================================
+
     @Override
     public String toString() {
         return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", unitCost=" + unitCost +
-                ", isbn='" + isbn + '\'' +
-                ", publicatioDate=" + publicationDate +
-                ", nbOfPages=" + nbOfPages +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", language=" + language +
-                '}';
+            "id=" + id +
+            ", title='" + title + '\'' +
+            ", description='" + description + '\'' +
+            ", unitCost=" + unitCost +
+            ", isbn='" + isbn + '\'' +
+            ", publicationDate=" + publicationDate +
+            ", language=" + language +
+            '}';
     }
 }
