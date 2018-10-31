@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cdbookstore:war exploded">
+    <output-path>$PROJECT_DIR$/cdbookstore/target/applicationCDBookStore</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cdbookstore" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="invoice-api-1.0.jar">
+            <element id="module-output" name="invoice-api" />
+          </element>
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:3.3.6" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:1.11.1" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.3" />
+          <element id="library" level="project" name="Maven: org.primefaces.themes:bootstrap:1.0.10" />
+          <element id="library" level="project" name="Maven: com.thedeanda:lorem:2.0" />
+          <element id="library" level="project" name="Maven: org.glassfish:javax.json:1.0.4" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/cdbookstore/target/applicationCDBookStore/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="cdbookstore/web/Web" />
+    </root>
+  </artifact>
+</component>

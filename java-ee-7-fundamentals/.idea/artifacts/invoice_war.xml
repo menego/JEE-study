@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="invoice:war">
+    <output-path>$PROJECT_DIR$/invoice/target</output-path>
+    <root id="archive" name="applicationInvoice.war">
+      <element id="artifact" artifact-name="invoice:war exploded" />
+    </root>
+  </artifact>
+</component>

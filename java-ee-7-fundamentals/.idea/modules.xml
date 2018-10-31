@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cdbookstore/cdbookstore.iml" filepath="$PROJECT_DIR$/cdbookstore/cdbookstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/invoice/invoice.iml" filepath="$PROJECT_DIR$/invoice/invoice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/invoice-api/invoice-api.iml" filepath="$PROJECT_DIR$/invoice-api/invoice-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parent.iml" filepath="$PROJECT_DIR$/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/toprated/toprated.iml" filepath="$PROJECT_DIR$/toprated/toprated.iml" />
+    </modules>
+  </component>
+</project>

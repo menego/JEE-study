@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="toprated:war">
+    <output-path>$PROJECT_DIR$/toprated/target</output-path>
+    <root id="archive" name="applicationToprated.war">
+      <element id="artifact" artifact-name="toprated:war exploded" />
+    </root>
+  </artifact>
+</component>

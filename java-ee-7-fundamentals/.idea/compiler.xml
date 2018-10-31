@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cdbookstore" />
+        <module name="invoice" />
+        <module name="invoice-api" />
+        <module name="toprated" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cdbookstore" target="1.8" />
+      <module name="invoice" target="1.8" />
+      <module name="invoice-api" target="1.8" />
+      <module name="parent" target="1.8" />
+      <module name="toprated" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

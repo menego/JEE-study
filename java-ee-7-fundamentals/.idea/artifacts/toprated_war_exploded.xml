@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="toprated:war exploded">
+    <output-path>$PROJECT_DIR$/toprated/target/applicationToprated</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="toprated" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.glassfish:javax.json:1.0.4" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/toprated/target/applicationToprated/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="toprated/web/Web" />
+    </root>
+  </artifact>
+</component>
